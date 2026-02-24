@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GHealthyBites</title>
+
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <h2>🥗 GHealthyBites</h2>
+
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#checkout">Checkout</a>
+      <button id="btnOpenMessenger" class="btn small">Chat</button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+
+    <div>
+      <h1>Healthy food delivered fast</h1>
+      <p>Fresh, nutritious meals designed for busy lifestyles.</p>
+      <button class="btn" onclick="scrollToMenu()">Browse Menu</button>
+    </div>
+
+    <img
+      src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1200&auto=format&fit=crop"
+      class="hero-img"
+    >
+  </div>
+</section>
+
+<section id="menu" class="section">
+  <div class="container">
+
+    <h2>Menu</h2>
+
+    <input
+      id="menuSearch"
+      class="search"
+      placeholder="Search meals..."
+    />
+
+    <div class="grid" id="menuGrid">
+
+      <div class="card menu-card">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1200&auto=format&fit=crop">
+        <h3>Chicken Protein Bowl</h3>
+        <p>High protein meal</p>
+        <div class="row">
+          <span>₹349</span>
+          <button class="btn small addBtn" data-item="Chicken Protein Bowl" data-price="349">Add</button>
+        </div>
+      </div>
+
+      <div class="card menu-card">
+        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=1200&auto=format&fit=crop">
+        <h3>Veggie Power Bowl</h3>
+        <p>Plant-based goodness</p>
+        <div class="row">
+          <span>₹299</span>
+          <button class="btn small addBtn" data-item="Veggie Power Bowl" data-price="299">Add</button>
+        </div>
+      </div>
+
+      <div class="card menu-card">
+        <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1200&auto=format&fit=crop">
+        <h3>Avocado Toast Set</h3>
+        <p>Healthy breakfast</p>
+        <div class="row">
+          <span>₹199</span>
+          <button class="btn small addBtn" data-item="Avocado Toast" data-price="199">Add</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="checkout" class="section alt">
+  <div class="container">
+
+    <h2>Cart</h2>
+
+    <div id="cart"></div>
+
+    <h3>Total: ₹<span id="total">0</span></h3>
+
+    <button class="btn" id="btnCheckout">Place Order</button>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © 2025 GHealthyBites
+  </div>
+</footer>
+
+<!-- GENESYS SNIPPET GOES HERE -->
+
+<script src="script.js?v=1"></script>
+
+</body>
+</html>
