@@ -4,319 +4,292 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GHealthyBites — Healthy Meals Delivered</title>
-  <meta name="description" content="A modern demo site for healthy food ordering to test Genesys Cloud Messenger and Journey events." />
+
+  <meta name="description" content="Healthy meals delivered fast. Demo site for testing Genesys Cloud Messenger and Journey events." />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <div class="brand">
-        <div class="logo" aria-hidden="true">G</div>
-        <div class="brand-text">
-          <div class="brand-name">GHealthyBites</div>
-          <div class="brand-sub">Healthy meals, delivered</div>
-        </div>
-      </div>
 
-      <nav class="nav">
-        <a href="#menu">Menu</a>
-        <a href="#how">How it works</a>
-        <a href="#genesys">Genesys Lab</a>
-        <a class="btn btn-small" href="#checkout">Order</a>
-      </nav>
+<header class="topbar">
+  <div class="container topbar-inner">
+    <div class="brand">
+      <div class="logo">G</div>
+      <div>
+        <div class="brand-name">GHealthyBites</div>
+        <div class="brand-sub">Healthy meals delivered</div>
+      </div>
     </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="pill">Demo ordering site • Visitor chat ready</div>
-          <h1>Healthy food that fits your schedule — not the other way around.</h1>
-          <p class="muted">
-            This is a sample website you can deploy on GitHub Pages and use to test
-            Genesys Cloud Messenger (visitor chat) and basic Journey events.
-          </p>
+    <nav class="nav">
+      <a href="#menu">Menu</a>
+      <a href="#how">How it works</a>
+      <a href="#genesys">Genesys Lab</a>
+      <a class="btn btn-small" href="#checkout">Order</a>
+    </nav>
+  </div>
+</header>
 
-          <div class="hero-cta">
-            <a class="btn" href="#menu">Browse menu</a>
-            <button class="btn btn-ghost" id="btnOpenMessenger" type="button">
-              Chat with us (Genesys)
-            </button>
-          </div>
+<main>
 
-          <div class="mini-stats">
-            <div class="stat">
-              <div class="stat-value">350–550</div>
-              <div class="stat-label">Calories per meal</div>
-            </div>
-            <div class="stat">
-              <div class="stat-value">15 min</div>
-              <div class="stat-label">Avg prep time</div>
-            </div>
-            <div class="stat">
-              <div class="stat-value">Fresh</div>
-              <div class="stat-label">Weekly menu</div>
-            </div>
-          </div>
+<section class="hero">
+  <div class="container hero-grid">
+
+    <div>
+      <div class="pill">Healthy food • Fast delivery • Visitor chat ready</div>
+
+      <h1>
+        Eat healthy without sacrificing time or taste.
+      </h1>
+
+      <p class="muted">
+        Order nutritious meals tailored to your lifestyle. Built as a demo site
+        for testing Genesys Cloud Messenger, Journey events, and digital CX flows.
+      </p>
+
+      <div class="hero-cta">
+        <a class="btn" href="#menu">Browse Menu</a>
+        <button class="btn btn-ghost" id="btnOpenMessenger">
+          Chat with us
+        </button>
+      </div>
+
+      <div class="mini-stats">
+        <div class="stat">
+          <div class="stat-value">500+</div>
+          <div class="stat-label">Meals delivered weekly</div>
         </div>
 
-        <div class="hero-card">
-          <div class="card">
-            <div class="card-header">
-              <div>
-                <div class="card-title">Today’s spotlight</div>
-                <div class="card-subtitle muted">High-protein • Low sugar</div>
-              </div>
-              <span class="badge">New</span>
-            </div>
+        <div class="stat">
+          <div class="stat-value">15 min</div>
+          <div class="stat-label">Avg prep time</div>
+        </div>
 
-            <div class="spotlight">
-              <div class="spotlight-img" aria-hidden="true"></div>
-              <div class="spotlight-body">
-                <div class="spotlight-name">Lemon Herb Chicken Bowl</div>
-                <div class="muted small">Quinoa • greens • yogurt dressing</div>
-                <div class="spotlight-row">
-                  <div class="price">₹349</div>
-                  <button class="btn btn-small" id="btnAddSpotlight" type="button">Add</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-footer">
-              <button class="btn btn-small" id="btnRecordMenuViewed" type="button">
-                Record “Menu Viewed” (Journey)
-              </button>
-              <button class="btn btn-small btn-ghost" id="btnCloseMessenger" type="button">
-                Close chat
-              </button>
-            </div>
-          </div>
-
-          <div class="tip">
-            <strong>Tip:</strong> Keep this as a static demo. Later you can connect a real ordering backend.
-          </div>
+        <div class="stat">
+          <div class="stat-value">Fresh</div>
+          <div class="stat-label">Ingredients daily</div>
         </div>
       </div>
-    </section>
-
-    <section id="menu" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Menu</h2>
-          <p class="muted">Click “Add” to simulate ordering. This is a demo cart.</p>
-        </div>
-
-        <div class="filters">
-          <button class="chip is-active" data-filter="all" type="button">All</button>
-          <button class="chip" data-filter="high-protein" type="button">High protein</button>
-          <button class="chip" data-filter="low-carb" type="button">Low carb</button>
-          <button class="chip" data-filter="veggie" type="button">Veggie</button>
-        </div>
-
-        <div class="grid menu-grid" id="menuGrid">
-          <article class="menu-card" data-tags="high-protein low-carb">
-            <div class="menu-thumb"></div>
-            <div class="menu-body">
-              <h3>Grilled Paneer Power Plate</h3>
-              <p class="muted">Paneer • salad • mint chutney</p>
-              <div class="menu-row">
-                <div class="price">₹299</div>
-                <button class="btn btn-small addBtn" data-item="Grilled Paneer Power Plate" data-price="299" type="button">Add</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="menu-card" data-tags="high-protein">
-            <div class="menu-thumb"></div>
-            <div class="menu-body">
-              <h3>Turkey/Chicken Salad Bowl</h3>
-              <p class="muted">Greens • olive oil • seeds</p>
-              <div class="menu-row">
-                <div class="price">₹349</div>
-                <button class="btn btn-small addBtn" data-item="Turkey/Chicken Salad Bowl" data-price="349" type="button">Add</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="menu-card" data-tags="veggie low-carb">
-            <div class="menu-thumb"></div>
-            <div class="menu-body">
-              <h3>Veggie Stir Fry</h3>
-              <p class="muted">Broccoli • peppers • sesame</p>
-              <div class="menu-row">
-                <div class="price">₹279</div>
-                <button class="btn btn-small addBtn" data-item="Veggie Stir Fry" data-price="279" type="button">Add</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="menu-card" data-tags="high-protein">
-            <div class="menu-thumb"></div>
-            <div class="menu-body">
-              <h3>Salmon + Sweet Potato</h3>
-              <p class="muted">Omega-3 • roasted veg</p>
-              <div class="menu-row">
-                <div class="price">₹399</div>
-                <button class="btn btn-small addBtn" data-item="Salmon + Sweet Potato" data-price="399" type="button">Add</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="menu-card" data-tags="veggie">
-            <div class="menu-thumb"></div>
-            <div class="menu-body">
-              <h3>Chickpea Buddha Bowl</h3>
-              <p class="muted">Chickpeas • quinoa • tahini</p>
-              <div class="menu-row">
-                <div class="price">₹319</div>
-                <button class="btn btn-small addBtn" data-item="Chickpea Buddha Bowl" data-price="319" type="button">Add</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="menu-card" data-tags="low-carb">
-            <div class="menu-thumb"></div>
-            <div class="menu-body">
-              <h3>Egg & Avocado Box</h3>
-              <p class="muted">Eggs • avocado • tomatoes</p>
-              <div class="menu-row">
-                <div class="price">₹259</div>
-                <button class="btn btn-small addBtn" data-item="Egg & Avocado Box" data-price="259" type="button">Add</button>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="how" class="section alt">
-      <div class="container">
-        <div class="section-head">
-          <h2>How it works</h2>
-          <p class="muted">Simple flow you can use to test chat + journey triggers.</p>
-        </div>
-
-        <div class="grid-3">
-          <div class="card step">
-            <h3>1) Pick meals</h3>
-            <p class="muted">Add items to your demo cart.</p>
-          </div>
-          <div class="card step">
-            <h3>2) Checkout</h3>
-            <p class="muted">Enter address (demo only).</p>
-          </div>
-          <div class="card step">
-            <h3>3) Get support</h3>
-            <p class="muted">Use Genesys chat for help or upsell.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="checkout" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Checkout (demo cart)</h2>
-          <p class="muted">This is not a real payment system — it’s for testing flows.</p>
-        </div>
-
-        <div class="checkout-grid">
-          <div class="card">
-            <h3>Your cart</h3>
-            <div class="cart" id="cart"></div>
-
-            <div class="cart-footer">
-              <div class="muted">Total</div>
-              <div class="total" id="total">₹0</div>
-            </div>
-
-            <div class="cart-actions">
-              <button class="btn" id="btnCheckout" type="button">Place order (demo)</button>
-              <button class="btn btn-ghost" id="btnClear" type="button">Clear</button>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3>Delivery details</h3>
-            <form onsubmit="return false;">
-              <label>
-                Name
-                <input id="name" type="text" placeholder="Your name" />
-              </label>
-              <label>
-                Phone
-                <input id="phone" type="tel" placeholder="+91..." />
-              </label>
-              <label>
-                Address
-                <textarea id="address" rows="4" placeholder="Your delivery address"></textarea>
-              </label>
-
-              <div class="row row-actions">
-                <button class="btn" id="btnNeedHelp" type="button">Need help? Chat</button>
-                <span class="muted small">Try the chat for delivery questions.</span>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="genesys" class="section alt">
-      <div class="container">
-        <div class="section-head">
-          <h2>Genesys Lab (test area)</h2>
-          <p class="muted">
-            Validate Messenger embed + record Journey events while you click around.
-          </p>
-        </div>
-
-        <div class="card lab">
-          <div class="lab-grid">
-            <div>
-              <h3>Messenger controls</h3>
-              <p class="muted">
-                Uses Messenger SDK commands such as <code>Messenger.open</code> and <code>Messenger.close</code>.
-              </p>
-              <div class="lab-actions">
-                <button class="btn" id="btnOpenMessenger2" type="button">Open chat</button>
-                <button class="btn btn-ghost" id="btnCloseMessenger2" type="button">Close chat</button>
-              </div>
-              <div class="note muted" id="genesysStatus">Status: Messenger not detected yet.</div>
-            </div>
-
-            <div>
-              <h3>Journey event tests</h3>
-              <p class="muted">
-                Records simple events via <code>Journey.record</code>. Open your browser console to see logs.
-              </p>
-              <div class="lab-actions">
-                <button class="btn" id="btnRecordPricing" type="button">Record “Viewed Offers”</button>
-                <button class="btn" id="btnRecordSupport" type="button">Record “Asked Support”</button>
-              </div>
-              <div class="note muted">These events help you test customer journey tracking.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="muted">© <span id="year"></span> GHealthyBites</div>
-      <div class="muted">GitHub Pages • Genesys-ready</div>
     </div>
-  </footer>
 
-  <!-- ============================= -->
-  <!-- PASTE YOUR GENESYS SNIPPET    -->
-  <!-- ============================= -->
-  <!-- Paste the Genesys Messenger Deployment snippet here (before script.js).
-       After pasting, "Chat with us" buttons should work. -->
+    <div class="card">
 
-  <script src="script.js"></script>
+      <div class="card-header">
+        <div>
+          <div class="card-title">Today’s Favorite</div>
+          <div class="card-subtitle muted">
+            High protein • Balanced macros
+          </div>
+        </div>
+        <span class="badge">Popular</span>
+      </div>
+
+      <img
+        class="img-rounded img-shadow img-border"
+        src="https://source.unsplash.com/8j16rDapYlQ/800x600"
+        alt="Healthy chicken bowl"
+      />
+
+      <div style="margin-top:12px;">
+        <strong>Lemon Herb Chicken Bowl</strong>
+        <div class="muted small">
+          Quinoa • greens • yogurt dressing
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <button class="btn btn-small" id="btnRecordMenuViewed">
+          Record Menu Viewed
+        </button>
+
+        <button class="btn btn-small btn-ghost" id="btnCloseMessenger">
+          Close Chat
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section id="menu" class="section">
+  <div class="container">
+
+    <div class="section-head">
+      <h2>Menu</h2>
+      <p class="muted">
+        Add meals to simulate ordering and trigger Journey events.
+      </p>
+    </div>
+
+    <div class="grid menu-grid">
+
+      <div class="menu-card">
+        <img class="menu-thumb"
+          src="https://source.unsplash.com/1O6ZIOP_Ymo/800x600"
+          alt="Healthy salad bowl">
+        <div class="menu-body">
+          <h3>Grilled Paneer Power Plate</h3>
+          <p class="muted">Paneer • greens • mint chutney</p>
+          <div class="menu-row">
+            <div class="price">₹299</div>
+            <button class="btn btn-small addBtn"
+              data-item="Paneer Power Plate"
+              data-price="299">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img class="menu-thumb"
+          src="https://source.unsplash.com/Hmhn6g_Owg4/800x600"
+          alt="Meal prep containers">
+        <div class="menu-body">
+          <h3>Chicken Protein Bowl</h3>
+          <p class="muted">Chicken • quinoa • greens</p>
+          <div class="menu-row">
+            <div class="price">₹349</div>
+            <button class="btn btn-small addBtn"
+              data-item="Chicken Protein Bowl"
+              data-price="349">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img class="menu-thumb"
+          src="https://source.unsplash.com/rqmKBWp2DX0/800x600"
+          alt="Vegetable stir fry">
+        <div class="menu-body">
+          <h3>Veggie Stir Fry</h3>
+          <p class="muted">Broccoli • peppers • sesame</p>
+          <div class="menu-row">
+            <div class="price">₹279</div>
+            <button class="btn btn-small addBtn"
+              data-item="Veggie Stir Fry"
+              data-price="279">Add</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="how" class="section alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>How it works</h2>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>Choose meals</h3>
+        <p class="muted">Browse menu and add to cart.</p>
+      </div>
+
+      <div class="card">
+        <h3>Checkout</h3>
+        <p class="muted">Enter delivery details.</p>
+      </div>
+
+      <div class="card">
+        <h3>Need help?</h3>
+        <p class="muted">Use chat powered by Genesys Cloud.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="checkout" class="section">
+  <div class="container">
+
+    <div class="section-head">
+      <h2>Checkout (Demo)</h2>
+    </div>
+
+    <div class="checkout-grid">
+
+      <div class="card">
+        <h3>Your cart</h3>
+        <div id="cart"></div>
+
+        <div class="cart-footer">
+          <div>Total</div>
+          <div class="total" id="total">₹0</div>
+        </div>
+
+        <div class="cart-actions">
+          <button class="btn" id="btnCheckout">Place Order</button>
+          <button class="btn btn-ghost" id="btnClear">Clear</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Delivery details</h3>
+
+        <label>Name
+          <input type="text" placeholder="Your name">
+        </label>
+
+        <label>Phone
+          <input type="tel" placeholder="+91...">
+        </label>
+
+        <label>Address
+          <textarea rows="4"></textarea>
+        </label>
+
+        <div class="row-actions">
+          <button class="btn" id="btnNeedHelp">
+            Need help? Chat
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="genesys" class="section alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>Genesys Lab</h2>
+      <p class="muted">
+        Test Messenger embed and Journey events.
+      </p>
+    </div>
+
+    <div class="card lab">
+      <div class="lab-actions">
+        <button class="btn" id="btnOpenMessenger2">Open Chat</button>
+        <button class="btn btn-ghost" id="btnCloseMessenger2">Close Chat</button>
+        <button class="btn" id="btnRecordPricing">Record Offer Viewed</button>
+        <button class="btn" id="btnRecordSupport">Record Support Event</button>
+      </div>
+
+      <div class="note muted" id="genesysStatus">
+        Messenger not detected yet.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>© <span id="year"></span> GHealthyBites</div>
+    <div class="muted">Demo site for Genesys Cloud testing</div>
+  </div>
+</footer>
+
+<!-- PASTE YOUR GENESYS MESSENGER SNIPPET HERE -->
+
+<script src="script.js"></script>
+
 </body>
 </html>
