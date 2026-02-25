@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GHealthyBites</title>
 
-<link rel="stylesheet" href="style.css?v=1">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 
 <body>
@@ -25,15 +25,19 @@
 <section class="hero">
   <div class="container hero-grid">
 
-    <div>
+    <div class="hero-copy">
       <h1>Healthy food delivered fast</h1>
       <p>Fresh, nutritious meals designed for busy lifestyles.</p>
-      <button class="btn" onclick="scrollToMenu()">Browse Menu</button>
+
+      <button class="btn" onclick="scrollToMenu()">
+        Browse Menu
+      </button>
     </div>
 
     <img
       src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1200&auto=format&fit=crop"
       class="hero-img"
+      alt="Healthy meal"
     >
   </div>
 </section>
@@ -43,13 +47,9 @@
 
     <h2>Menu</h2>
 
-    <input
-      id="menuSearch"
-      class="search"
-      placeholder="Search meals..."
-    />
+    <input id="menuSearch" class="search" placeholder="Search meals...">
 
-    <div class="grid" id="menuGrid">
+    <div class="grid">
 
       <div class="card menu-card">
         <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1200&auto=format&fit=crop">
@@ -87,15 +87,15 @@
 
 <section id="checkout" class="section alt">
   <div class="container">
-
     <h2>Cart</h2>
 
     <div id="cart"></div>
 
     <h3>Total: ₹<span id="total">0</span></h3>
 
-    <button class="btn" id="btnCheckout">Place Order</button>
-
+    <button class="btn" id="btnCheckout">
+      Place Order
+    </button>
   </div>
 </section>
 
@@ -105,9 +105,7 @@
   </div>
 </footer>
 
-<!-- GENESYS SNIPPET GOES HERE -->
-
-<script src="script.js?v=1"></script>
+<script src="script.js?v=5"></script>
 
 </body>
 </html>
